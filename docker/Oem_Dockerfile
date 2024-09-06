@@ -1,0 +1,8 @@
+FROM test # 替换成ci跑完后的sophon-ui的新疆名
+
+WORKDIR /usr/lib/kg_pierce_mvp
+COPY dist/ ${KG_PIERCE_MVP_HOME}/build
+COPY bin/ ${KG_PIERCE_MVP_HOME}/bin
+# COPY confd/ /etc/confd
+RUN ln ${KG_PIERCE_MVP_HOME}/bin/boot.sh /bin/boot.sh && chmod 777 /bin/boot.sh \
+    && ln ${KG_PIERCE_MVP_HOME}/bin/bootstrap.sh /bin/bootstrap.sh && chmod 777 /bin/bootstrap.sh

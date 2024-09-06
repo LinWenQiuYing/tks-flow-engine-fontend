@@ -1,0 +1,14 @@
+/node_modules
+/dist
+.eslintrc.js
+babel.config.js
+prettier.config.js
+vue.config.js
+stylelint.config.js
+/router
+manifest.json
+
+*.nvue
+
+/components/uni-*
+
